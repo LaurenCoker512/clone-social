@@ -7,6 +7,8 @@
     <title>Social Activity</title>
     <meta name="keywords" content="school, academy, open classroom, liberal arts, science, education, children">
     <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="temp/styles/styles.css">
 </head>
 
@@ -14,27 +16,44 @@
 
     <header class="header">
         <div class="header__left">
-            <div class="header__left__location">
-
+            <div class="header__left__section">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Brooklyn, NY 10036, United States</span>
             </div>
-            <div class="header__left__phone">
-
+            <div class="header__left__section">
+                <i class="fas fa-mobile-alt"></i>
+                <span>1-800-123-1234</span>
             </div>
-            <div class="header__left__email">
-
+            <div class="header__left__section">
+                <i class="fas fa-envelope"></i>
+                <span><a href="#">example@social-activity.com</a></span>
             </div>
         </div>
         <div class="header__right">
-
+            <div class="header__right__icon">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="header__right__icon">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="header__right__icon">
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+            <div class="header__right__icon">
+                <i class="fab fa-vimeo-v"></i>
+            </div>
+            <div class="header__right__icon">
+                <i class="fab fa-skype"></i>
+            </div>
         </div>
     </header>
 
-    <section class="header-logo">
-        <div class="header-logo__logo">
-
+    <section class="header-logo section__wrapper">
+        <div class="header-logo__section">
+            <img src="assets/images/logo-1.png">
         </div>
-        <div class="header-logo__search">
-
+        <div class="header-logo__section">
+            <i class="fas fa-search"></i>
         </div>
     </section>
 
@@ -378,31 +397,11 @@
 </html>
 
 <!--
-
-    Grayish blue - #747e86
-    Darker blue - #3c576e
-    Main red - #b83d46
-
-    Roboto Slab - 400
-    Roboto Condensed - 500
-    Lato - 100, 300, 400, 700, 900
-
-    Width of body at Large - 77.625rem
-    Width of body at Medium - 62.5rem
-
-    XSmall - 524px
-    Small - 760px
-    Medium - 1000px
-    Large - 1424px
-
     Contact Header - 
-        2.125rem height, grayish blue background, white text
         Collapse under medium breakpoints
         Slide down to reveal three-section contact info
-    Main Header - 6.25rem height, flexbox with space-between
     Section wrapper - 2rem padding on right and left, section title should be all uppercase with 3.75rem bottom margin/padding
     Nav - 
-        2.8125rem high, main red background
         Li width depends on text size - 2rem padding on left and right is universal
         Li's are aligned left, with extra space stretched out on right
     Large Hero - 

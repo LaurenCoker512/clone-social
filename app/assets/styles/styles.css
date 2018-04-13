@@ -1,7 +1,8 @@
 @import "normalize.css";
 @import "base/_variables";
-@import "base/_global";
 @import "base/_mixins";
+@import "base/_global";
+@import "modules/_section";
 @import "modules/_header";
 @import "modules/_about";
 @import "modules/_buy";
@@ -18,3 +19,4 @@
 @import "modules/_rights";
 @import "modules/_tweets";
 @import "modules/_voice";
+@import "modules/_header-logo";

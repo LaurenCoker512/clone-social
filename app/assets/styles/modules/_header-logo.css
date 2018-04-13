@@ -1,0 +1,25 @@
+.header-logo {
+    height: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.2rem;
+
+    &__section {
+
+        & img {
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        & svg {
+            font-size: 1.3rem;
+            color: $darkBlue;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
