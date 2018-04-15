@@ -1,17 +1,24 @@
 .main-nav {
     background-color: $mainRed;
     color: #fff;
-    height: 2.8125rem;
+    height: 5rem;
+
+    @mixin atMedium {
+        height: 2.8125rem;
+    }
 
     &__nav {
+        display: none;
+
+        @mixin atMedium {
+            display: block;
+        }
 
         &__main-menu {
             list-style: none;
             list-style-position: none;
             -webkit-margin-before: 0;
             -webkit-margin-after: 0;
-
-            
 
             &__item {
                 display: inline-block;

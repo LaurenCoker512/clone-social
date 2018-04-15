@@ -1,5 +1,11 @@
 .section {
 
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
     &__wrapper {
         padding: 0 2rem;
     }

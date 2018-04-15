@@ -364,6 +364,12 @@ body {
 }
     }
 
+.section__title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
 .section__wrapper {
         padding: 0 2rem;
     }
@@ -429,8 +435,59 @@ body {
             }
 
 .about {
+    display: flex;
+    justify-content: space-between;
     
 }
+
+.about__activism {
+        width: 12.875rem;
+        color: #3c576e;
+    }
+
+@media (min-width: 1424px) {
+
+.about__activism {
+            width: 16rem
+    }
+    }
+
+.about__activism h3 {
+            font-size: 2.2rem;
+            margin-bottom: 0.2rem;
+            font-family: "Roboto Slab", sans-serif;
+        }
+
+.about__activism h4 {
+            text-transform: uppercase;
+            margin-top: 0;
+            font-size: 1rem;
+        }
+
+.about__text {
+        width: 28.125rem;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        color: #3c576e;
+    }
+
+@media (min-width: 1424px) {
+
+.about__text {
+            width: 35.25rem
+    }
+    }
+
+.about__membership {
+        width: 12.875rem;
+    }
+
+@media (min-width: 1424px) {
+
+.about__membership {
+            width: 16rem
+    }
+    }
 
 .buy {
     
@@ -441,30 +498,102 @@ body {
 }
 
 .events {
+    display: flex;
+    justify-content: space-between;
     
 }
+
+.events__section {
+        width: 18rem;
+    }
+
+@media (min-width: 1424px) {
+
+.events__section {
+            width: 22.25rem
+    }
+    }
+
+.events__section img {
+            width: 100%;
+        }
 
 .footer {
     
 }
 
 .four-pillars {
-    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
+
+.four-pillars__img {
+        width: 12.875rem;
+    }
+
+@media (min-width: 1424px) {
+
+.four-pillars__img {
+            width: 16rem
+    }
+    }
+
+.four-pillars__img img {
+            width: 100%;
+        }
 
 .funds {
     
 }
 
 .large-hero {
-    
+    width: 100%;
 }
+
+@media (min-width: 1000px) {
+
+.large-hero {
+        height: 29.25rem
+}
+    }
+
+@media (min-width: 1424px) {
+
+.large-hero {
+        height: 36.375rem
+}
+    }
+
+.large-hero__img img {
+            width: 100%;
+        }
 
 .main-nav {
     background-color: #b83d46;
     color: #fff;
-    height: 2.8125rem;
+    height: 5rem;
 }
+
+@media (min-width: 1000px) {
+
+.main-nav {
+        height: 2.8125rem
+}
+    }
+
+.main-nav__nav {
+        display: none;
+    }
+
+@media (min-width: 1000px) {
+
+.main-nav__nav {
+            display: block
+    }
+    }
 
 .main-nav__nav__main-menu {
             list-style: none;
@@ -508,7 +637,8 @@ body {
 }
 
 .rights {
-    
+    background-color: #435774;
+    height: 36.25rem;
 }
 
 .tweets {

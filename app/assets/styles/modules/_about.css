@@ -1,3 +1,45 @@
 .about {
+    display: flex;
+    justify-content: space-between;
+
+    &__activism {
+        width: 12.875rem;
+        color: $darkBlue;
+
+        @mixin atLarge {
+            width: 16rem;
+        }
+
+        & h3 {
+            font-size: 2.2rem;
+            margin-bottom: 0.2rem;
+            font-family: "Roboto Slab", sans-serif;
+        }
+
+        & h4 {
+            text-transform: uppercase;
+            margin-top: 0;
+            font-size: 1rem;
+        }
+    }
+
+    &__text {
+        width: 28.125rem;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        color: $darkBlue;
+        
+        @mixin atLarge {
+            width: 35.25rem;
+        }
+    }
+
+    &__membership {
+        width: 12.875rem;
+
+        @mixin atLarge {
+            width: 16rem;
+        }
+    }
     
 }

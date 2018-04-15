@@ -1,3 +1,18 @@
 .large-hero {
+    width: 100%;
+
+    @mixin atMedium {
+        height: 29.25rem;
+    }
     
+    @mixin atLarge {
+        height: 36.375rem;
+    }
+
+    &__img {
+
+        & img {
+            width: 100%;
+        }
+    }
 }

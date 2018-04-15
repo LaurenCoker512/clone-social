@@ -1,3 +1,17 @@
 .events {
+    display: flex;
+    justify-content: space-between;
+
+    &__section {
+        width: 18rem;
+
+        @mixin atLarge {
+            width: 22.25rem;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
     
 }
