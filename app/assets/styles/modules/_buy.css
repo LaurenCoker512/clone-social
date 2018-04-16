@@ -2,11 +2,8 @@
     background-color: $mainRed;
     padding-top: 2rem;
     padding-bottom: 4rem;
+    color: #fff;
     
-    &__title {
-        color: #fff;
-    }
-
     &__content {
         display: flex;
         justify-content: space-between;
@@ -17,17 +14,52 @@
         border: 1px solid rgba(255, 255, 255, 0.25);
 
         &__img {
+            overflow: hidden;
 
             & img {
                 width: 100%;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    transform: scale(1.05);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__description {
+            margin-left: 1rem;
+
+            &__title {
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                margin-bottom: 0;
+            }
+
+            &__type {
+                color: rgba(255, 255, 255, 0.7);
+                font-family: "Arial", sans-serif;
+                font-size: 0.8rem;
+                margin-top: 0.2rem;
             }
         }
 
         &__action {
+            display: flex;
 
             & button {
-                width: 6.15rem;
-                border: 1px solid rgba(255, 255, 255, 0.25);
+                width: 50%;
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.25);
+                color: rgba(255, 255, 255, 0.7);
+                background-color: transparent;
+                font-family: "Arial", sans-serif;
+                font-size: 0.8rem;
+                padding: 0.7rem 0;
+
+                &:first-of-type {
+                    border-right: 1px solid rgba(255, 255, 255, 0.25);
+                }
             }
         }
     }

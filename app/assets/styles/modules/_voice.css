@@ -1,4 +1,5 @@
 .voice {
+    margin-bottom: 4rem;
 
     &__title {
         color: $darkGrayBlue;

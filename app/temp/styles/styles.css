@@ -345,9 +345,23 @@ template {
     box-sizing: border-box;
 }
 
+html {
+    /* background-color: #31485e; */
+    /* background-color: #d6e1e9; */
+    background: rgba(49,72,94,1);
+    /* background: -moz-linear-gradient(top, rgba(49,72,94,1) 0%, rgba(49,72,94,1) 20%, rgba(214,225,233,1) 20%, rgba(214,225,233,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(49,72,94,1)), color-stop(20%, rgba(49,72,94,1)), color-stop(20%, rgba(214,225,233,1)), color-stop(100%, rgba(214,225,233,1)));
+    background: -webkit-linear-gradient(top, rgba(49,72,94,1) 0%, rgba(49,72,94,1) 20%, rgba(214,225,233,1) 20%, rgba(214,225,233,1) 100%);
+    background: -o-linear-gradient(top, rgba(49,72,94,1) 0%, rgba(49,72,94,1) 20%, rgba(214,225,233,1) 20%, rgba(214,225,233,1) 100%);
+    background: -ms-linear-gradient(top, rgba(49,72,94,1) 0%, rgba(49,72,94,1) 20%, rgba(214,225,233,1) 20%, rgba(214,225,233,1) 100%); */
+    background: linear-gradient(to bottom, rgba(49,72,94,1) 0%, rgba(49,72,94,1) 16.3%, rgba(214,225,233,1) 16.3%, rgba(214,225,233,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31485e', endColorstr='#d6e1e9', GradientType=0 );
+}
+
 body {
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0 auto;
+    background-color: #fff;
 }
 
 @media (min-width: 1000px) {
@@ -493,11 +507,8 @@ body {
     background-color: #b83d46;
     padding-top: 2rem;
     padding-bottom: 4rem;
+    color: #fff;
 }
-
-.buy__title {
-        color: #fff;
-    }
 
 .buy__content {
         display: flex;
@@ -509,14 +520,56 @@ body {
         border: 1px solid rgba(255, 255, 255, 0.25);
     }
 
+.buy__section__img {
+            overflow: hidden;
+        }
+
 .buy__section__img img {
                 width: 100%;
+                transition: all 0.2s linear;
             }
 
-.buy__section__action button {
-                width: 6.15rem;
-                border: 1px solid rgba(255, 255, 255, 0.25);
+.buy__section__img img:hover {
+                    -webkit-transform: scale(1.05);
+                            transform: scale(1.05);
+                    cursor: pointer;
+                }
+
+.buy__section__description {
+            margin-left: 1rem;
+        }
+
+.buy__section__description__title {
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                margin-bottom: 0;
             }
+
+.buy__section__description__type {
+                color: rgba(255, 255, 255, 0.7);
+                font-family: "Arial", sans-serif;
+                font-size: 0.8rem;
+                margin-top: 0.2rem;
+            }
+
+.buy__section__action {
+            display: flex;
+        }
+
+.buy__section__action button {
+                width: 50%;
+                border: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.25);
+                color: rgba(255, 255, 255, 0.7);
+                background-color: transparent;
+                font-family: "Arial", sans-serif;
+                font-size: 0.8rem;
+                padding: 0.7rem 0;
+            }
+
+.buy__section__action button:first-of-type {
+                    border-right: 1px solid rgba(255, 255, 255, 0.25);
+                }
 
 .donate {
     
@@ -688,12 +741,86 @@ body {
                 }
 
 .members {
+    color: #435774;
+    margin-top: 4rem;
     
 }
 
+.members__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+.members__section {
+        width: 18rem;
+    }
+
+.members__section img {
+            width: 100%;
+        }
+
+.members__section__text {
+            font-family: "Roboto Slab", sans-serif;
+        }
+
+.members__section__text__title {
+                margin-bottom: 0.5rem;
+            }
+
+.members__section__text__description {
+                font-style: italic;
+                font-size: 0.9rem;
+                margin-top: 0;
+                color: rgba(67, 87, 116, 0.5);
+            }
+
+.members__section__contact {
+            border-top: 1px solid (0, 0, 0, 0.2);
+        }
+
 .news {
+    margin-top: 2rem;
+    color: #435774;
     
 }
+
+.news__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+.news__section {
+        width: 18.25rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+.news__section__img {
+            height: 14.5rem;
+            overflow: hidden;
+        }
+
+.news__section__img img {
+                height: 100%;
+            }
+
+.news__section__description {
+            margin-left: 1rem;
+        }
+
+.news__section__description__title {
+                font-family: "Roboto Slab", sans-serif;
+                margin-bottom: 0;
+            }
+
+.news__section__description__tags {
+                text-transform: uppercase;
+                font-size: 0.7rem;
+            }
+
+.news__section__description__tags a {
+                    text-decoration: none;
+                    color: #b83d46;
+                }
 
 .progress {
     
@@ -754,6 +881,11 @@ body {
             }
 
 .tweets {
+    
+}
+
+.voice {
+    margin-bottom: 4rem;
     
 }
 

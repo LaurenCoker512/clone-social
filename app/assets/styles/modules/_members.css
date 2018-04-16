@@ -1,3 +1,37 @@
 .members {
+    color: $darkGrayBlue;
+    margin-top: 4rem;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__section {
+        width: 18rem;
+
+        & img {
+            width: 100%;
+        }
+
+        &__text {
+            font-family: "Roboto Slab", sans-serif;
+
+            &__title {
+                margin-bottom: 0.5rem;
+            }
+
+            &__description {
+                font-style: italic;
+                font-size: 0.9rem;
+                margin-top: 0;
+                color: rgba(67, 87, 116, 0.5);
+            }
+        }
+
+        &__contact {
+            border-top: 1px solid (0, 0, 0, 0.2);
+        }
+    }
     
 }
