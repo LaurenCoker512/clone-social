@@ -1,3 +1,49 @@
 .voice {
+
+    &__title {
+        color: $darkGrayBlue;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__section {
+        width: 29rem;
+        display: flex;
+        padding: 2rem;
+        border: 1px solid #dbdee1;
+        color: $mainGray;
+        background-color: rgba(135, 156, 174, 0.05);
+
+        &:first-of-type {
+            border-right: none;
+            border-bottom: none;
+        }
+
+        &:nth-of-type(2) {
+            border-bottom: none;
+        }
+
+        &:nth-of-type(3) {
+            border-right: none;
+        }
+
+        &__img {
+            width: 65rem;
+            margin-right: 1.5rem;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        &__text {
+            font-size: 0.8rem;
+            font-family: "Arial", sans-serif;
+            line-height: 1.5;
+        }
+    }
     
 }
