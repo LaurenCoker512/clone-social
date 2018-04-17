@@ -1,12 +1,16 @@
 .large-hero {
-    width: 100%;
+    position: relative;
 
-    @mixin atMedium {
-        height: 29.25rem;
-    }
-    
-    @mixin atLarge {
-        height: 36.375rem;
+    &__content {
+        width: 100%;
+
+        @mixin atMedium {
+            height: 29.25rem;
+        }
+        
+        @mixin atLarge {
+            height: 36.375rem;
+        }
     }
 
     &__img {
@@ -15,4 +19,54 @@
             width: 100%;
         }
     }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        
+        border: solid red;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        z-index: 10;
+
+        &--left {
+            transform: rotate(135deg);
+            left: 1rem;
+        }
+
+        &--right {
+            transform: rotate(-45deg);
+            right: 1rem;
+        }
+    }
 }
+
+/* .tns-outer {
+    position: relative;
+
+    & > button {
+        position: absolute;
+        z-index: 5;
+    }
+}
+
+.tns-controls {
+    position: absolute;
+    z-index: 5;
+
+    &:first-child {
+        left: 1rem;
+        top: 50%;
+    }
+
+    &:last-child {
+        right: 1rem;
+        top: 50%;
+    }
+}
+
+.tns-nav {
+    position: absolute;
+    z-index: 5;
+} */

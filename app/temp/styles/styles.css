@@ -803,26 +803,82 @@ body {
 }
 
 .large-hero {
-    width: 100%;
+    position: relative;
 }
+
+.large-hero__content {
+        width: 100%;
+    }
 
 @media (min-width: 1000px) {
 
-.large-hero {
-        height: 29.25rem
-}
+.large-hero__content {
+            height: 29.25rem
+    }
     }
 
 @media (min-width: 1424px) {
 
-.large-hero {
-        height: 36.375rem
-}
+.large-hero__content {
+            height: 36.375rem
+    }
     }
 
 .large-hero__img img {
             width: 100%;
         }
+
+.large-hero__arrow {
+        position: absolute;
+        top: 50%;
+        
+        border: solid red;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        z-index: 10;
+    }
+
+.large-hero__arrow--left {
+            -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+            left: 1rem;
+        }
+
+.large-hero__arrow--right {
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+            right: 1rem;
+        }
+
+/* .tns-outer {
+    position: relative;
+
+    & > button {
+        position: absolute;
+        z-index: 5;
+    }
+}
+
+.tns-controls {
+    position: absolute;
+    z-index: 5;
+
+    &:first-child {
+        left: 1rem;
+        top: 50%;
+    }
+
+    &:last-child {
+        right: 1rem;
+        top: 50%;
+    }
+}
+
+.tns-nav {
+    position: absolute;
+    z-index: 5;
+} */
 
 .main-nav {
     background-color: #b83d46;
