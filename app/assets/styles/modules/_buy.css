@@ -1,17 +1,42 @@
 .buy {
     background-color: $mainRed;
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
     color: #fff;
+
+    @mixin atMedium {
+        padding-bottom: 4rem;
+    }
     
     &__content {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 3.5rem;
+
+        @mixin atMedium {
+            flex-wrap: nowrap;
+            margin-top: 0;
+        }
     }
 
     &__section {
-        width: 12.75rem;
+        width: 100%;
         border: 1px solid rgba(255, 255, 255, 0.25);
+        margin-bottom: 3rem;
+
+        @mixin atSmall {
+            width: 48%;
+        }
+
+        @mixin atMedium {
+            width: 12.75rem;
+            margin-bottom: 0;
+        }
+
+        @mixin atLarge {
+            width: 15.75rem;
+        }
 
         &__img {
             overflow: hidden;
@@ -41,6 +66,29 @@
                 font-family: "Arial", sans-serif;
                 font-size: 0.8rem;
                 margin-top: 0.2rem;
+            }
+
+            &__price {
+                margin-bottom: 1rem;
+            }
+
+            &__rating {
+                float: right;
+                margin-right: 1rem;
+                font-size: 0.8rem;
+                unicode-bidi: bidi-override;
+                direction: rtl;
+
+                & > span:hover:before {
+                    content: "\2605";
+                    position: absolute;
+                    cursor: pointer;
+                }
+
+                & > span:hover ~ span:before {
+                    content: "\2605";
+                    position: absolute;
+                }
             }
         }
 

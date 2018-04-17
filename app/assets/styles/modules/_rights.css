@@ -3,6 +3,10 @@
     height: 36.25rem;
     padding-top: 2rem;
 
+    @mixin atLarge {
+        height: 41.625rem;
+    }
+
     &__title {
         color: #fff;
     }
@@ -17,6 +21,11 @@
         height: 23.25rem;
         overflow: hidden;
 
+        @mixin atLarge {
+            width: 36.25rem;
+            height: 28.75rem;
+        }
+
         & img {
             width: 100%;
             transition: all 0.2s linear;
@@ -29,15 +38,27 @@
 
     &__left {
         width: 14.75rem;
+
+        @mixin atLarge {
+            width: 18.125rem;
+        }
     }
 
     &__right {
         width: 14.75rem;
+
+        @mixin atLarge {
+            width: 18.125rem;
+        }
     }
 
     &__small-section {
         height: 11.625rem;
         overflow: hidden;
+
+        @mixin atLarge {
+            height: 14.375rem;
+        }
 
         & img {
             width: 100%;

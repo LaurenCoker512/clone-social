@@ -7,6 +7,14 @@
     }
 
     &__wrapper {
-        padding: 0 2rem;
+        padding: 0 1.3rem;
+
+        @mixin atMedium {
+            padding: 0 2rem;
+        }
+
+        @mixin atLarge {
+            padding: 0 2.5rem;
+        }
     }
 }

@@ -9,11 +9,24 @@
     &__content {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 3.5rem;
+
+        @mixin atSmall {
+            flex-wrap: nowrap;
+        }
     }
 
     &__section {
-        width: 18rem;
+        width: 100%;
+
+        @mixin atSmall {
+            width: 30.5%;
+        }
+
+        @mixin atMedium {
+            width: 18rem;
+        }
 
         @mixin atLarge {
             width: 22.25rem;
