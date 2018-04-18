@@ -1,6 +1,10 @@
 .large-hero {
     position: relative;
 
+    &:hover .large-hero__arrow {
+        opacity: 1;
+    }
+
     &__content {
         width: 100%;
 
@@ -23,50 +27,45 @@
     &__arrow {
         position: absolute;
         top: 50%;
-        
-        border: solid red;
-        border-width: 0 3px 3px 0;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
         display: inline-block;
-        padding: 3px;
+        padding: 0.8rem;
         z-index: 10;
+        opacity: 0;
+        transition: all 0.2s linear;
+
+        &:hover {
+            cursor: pointer;
+        }
 
         &--left {
             transform: rotate(135deg);
-            left: 1rem;
+            left: 1.5rem;
         }
 
         &--right {
             transform: rotate(-45deg);
-            right: 1rem;
+            right: 1.5rem;
         }
     }
-}
 
-/* .tns-outer {
-    position: relative;
-
-    & > button {
+    &__start {
         position: absolute;
-        z-index: 5;
+        top: 95%;
+        left: 50%;
+        /* color: #fff;
+        font-size: 0.5rem; */
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__start-btn {
+        width: 8px;
+        height: 11px;
+        border-right: 2px solid #fff;
+        border-left: 2px solid #fff;
     }
 }
-
-.tns-controls {
-    position: absolute;
-    z-index: 5;
-
-    &:first-child {
-        left: 1rem;
-        top: 50%;
-    }
-
-    &:last-child {
-        right: 1rem;
-        top: 50%;
-    }
-}
-
-.tns-nav {
-    position: absolute;
-    z-index: 5;
-} */

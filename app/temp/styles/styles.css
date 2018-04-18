@@ -806,6 +806,10 @@ body {
     position: relative;
 }
 
+.large-hero:hover .large-hero__arrow {
+        opacity: 1;
+    }
+
 .large-hero__content {
         width: 100%;
     }
@@ -831,54 +835,50 @@ body {
 .large-hero__arrow {
         position: absolute;
         top: 50%;
-        
-        border: solid red;
-        border-width: 0 3px 3px 0;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
         display: inline-block;
-        padding: 3px;
+        padding: 0.8rem;
         z-index: 10;
+        opacity: 0;
+        transition: all 0.2s linear;
     }
+
+.large-hero__arrow:hover {
+            cursor: pointer;
+        }
 
 .large-hero__arrow--left {
             -webkit-transform: rotate(135deg);
                     transform: rotate(135deg);
-            left: 1rem;
+            left: 1.5rem;
         }
 
 .large-hero__arrow--right {
             -webkit-transform: rotate(-45deg);
                     transform: rotate(-45deg);
-            right: 1rem;
+            right: 1.5rem;
         }
 
-/* .tns-outer {
-    position: relative;
-
-    & > button {
+.large-hero__start {
         position: absolute;
-        z-index: 5;
-    }
-}
-
-.tns-controls {
-    position: absolute;
-    z-index: 5;
-
-    &:first-child {
-        left: 1rem;
-        top: 50%;
+        top: 95%;
+        left: 50%;
     }
 
-    &:last-child {
-        right: 1rem;
-        top: 50%;
-    }
-}
+/* color: #fff;
+        font-size: 0.5rem; */
 
-.tns-nav {
-    position: absolute;
-    z-index: 5;
-} */
+.large-hero__start:hover {
+            cursor: pointer;
+        }
+
+.large-hero__start-btn {
+        width: 8px;
+        height: 11px;
+        border-right: 2px solid #fff;
+        border-left: 2px solid #fff;
+    }
 
 .main-nav {
     background-color: #b83d46;

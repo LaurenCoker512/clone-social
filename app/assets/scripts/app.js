@@ -7,7 +7,10 @@ var slider = tns({
     autoplay: true,
     speed: 2000,
     controlsText: "",
-    controlsContainer: ".large-hero__nav"
+    controlsContainer: ".large-hero__nav",
+    autoplayText: ["", ""],
+    autoplayButton: ".large-hero__start-btn",
+    autoplayButtonOutput: false
 });
 
 console.log("Hello!");
