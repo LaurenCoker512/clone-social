@@ -409,6 +409,17 @@ body {
     padding: 0.5rem 2rem;
 }
 
+.header__content {
+        display: none;
+    }
+
+@media (min-width: 1000px) {
+
+.header__content {
+            display: block
+    }
+    }
+
 .header__left {
         float: left;
     }
@@ -648,9 +659,84 @@ body {
                     border-right: 1px solid rgba(255, 255, 255, 0.25);
                 }
 
+.buy__section__action__icon {
+                color: rgba(255, 255, 255, 0.3);
+                margin-right: 0.5rem;
+            }
+
 .donate {
-    
+    height: 24.375rem;
+    color: #fff;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
+
+.donate__overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(88, 90, 115, 0.85);
+        padding-top: 2.5rem;
+    }
+
+.donate__content {
+        display: flex;
+    }
+
+.donate__options {
+        width: 39%;
+        margin-top: 1rem;
+    }
+
+.donate__options__option {
+            width: 20.625rem;
+            height: 3.25rem;
+            text-transform: uppercase;
+            text-align: left;
+            padding-left: 1.5rem;
+            color: rgba(255, 255, 255, 0.75);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.2s linear;
+        }
+
+.donate__options__option:hover {
+                color: #585a73;
+                background-color: #fff;
+                cursor: pointer;
+            }
+
+.donate__options__option:first-of-type {
+                border-bottom: none;
+            }
+
+.donate__options__option:last-of-type {
+                border-top: none;
+            }
+
+.donate__text {
+        width: 61%;
+        font-family: "Roboto Slab", sans-serif;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+.donate__btn {
+        color: #585a73;
+        background-color: #fff;
+        border: 2px solid #fff;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        font-family: "Roboto Condensed", sans-serif;
+        transition: background-color 0.2s linear, color 1s linear;
+        font-size: 1.05rem;
+    }
+
+.donate__btn:hover {
+            cursor: pointer;
+            background-color: #585a73;
+            color: #fff;
+        }
 
 .events {
     padding-top: 2.5rem;
@@ -942,10 +1028,32 @@ body {
 .members__content {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+@media (min-width: 760px) {
+
+.members__content {
+            flex-wrap: nowrap
+    }
     }
 
 .members__section {
-        width: 18rem;
+        width: 100%;
+    }
+
+@media (min-width: 760px) {
+
+.members__section {
+            width: 30.5%
+    }
+    }
+
+@media (min-width: 1000px) {
+
+.members__section {
+            width: 18rem
+    }
     }
 
 .members__section img {
@@ -1110,8 +1218,15 @@ body {
             }
 
 .tweets {
-    
+    height: 21.375rem;
 }
+
+.tweets__overlay {
+        width: 100%;
+        height: 100%;
+        background-color: #b83d46;
+        opacity: 0.89;
+    }
 
 .voice {
     margin-bottom: 4rem;

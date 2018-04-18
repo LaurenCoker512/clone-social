@@ -1,4 +1,6 @@
-// import tns from "tiny-slider";
+import jarallax from "jarallax";
+
+//Slider
 
 var slider = tns({
     container: ".large-hero__content",
@@ -13,4 +15,13 @@ var slider = tns({
     autoplayButtonOutput: false
 });
 
-console.log("Hello!");
+//Parallax scrolling
+
+jarallax(document.querySelectorAll('.jarallax'), {
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
+    disableVideo: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    }
+});
