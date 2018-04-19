@@ -929,8 +929,45 @@ body {
             }
 
 .footer {
-    
+    height: 25rem;
+    background-color: #3c576e;
+    color: rgba(255, 255, 255, 0.25);
+    padding-top: 5rem;
 }
+
+.footer__logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+.footer__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 19rem;
+        margin: 3.5rem auto 3rem auto;
+    }
+
+.footer__icons__icon {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.25);
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            padding-left: 0.6rem;
+            padding-top: 0.5rem;
+        }
+
+.footer__icons__icon svg {
+                font-size: 1.8rem;
+                color: #3c576e;
+            }
+
+.footer p {
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        font-size: 0.85rem;
+    }
 
 .four-pillars {
     display: flex;
@@ -1284,8 +1321,48 @@ body {
                 }
 
 .progress {
-    
+    height: 23rem;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+    color: #fff;
 }
+
+.progress__overlay {
+        padding-top: 2rem;
+        background-color: #3c576e;
+        width: 100%;
+        height: 100%;
+        opacity: 0.9;
+    }
+
+.progress__content {
+        display: flex;
+        justify-content: center;
+        width: 55.625rem;
+        margin: 0 auto;
+    }
+
+.progress__section {
+        width: 25%;
+        display: flex;
+    }
+
+.progress__section svg {
+            font-size: 3rem;
+            margin-top: 3.5rem;
+            margin-right: 1rem;
+        }
+
+.progress__section__right__num {
+                font-size: 3rem;
+                color: #dd5d66;
+                margin-bottom: 0.5rem;
+            }
+
+.progress__section__right__type {
+                font-family: "Roboto Slab", sans-serif;
+                margin-top: 0;
+            }
 
 .rights {
     background-color: #435774;

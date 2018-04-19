@@ -1,4 +1,4 @@
-// import jarallax from "jarallax";
+import CountUp from "countup.js";
 
 //Slider
 
@@ -26,3 +26,15 @@ jarallax(document.querySelectorAll('.jarallax'), {
         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
     }
 });
+
+//CountUp
+
+var itemMembers = document.getElementById("item-members"),
+    countMembers = 1254,
+    itemRallies = document.getElementById("item-rallies"),
+    countRallies = 147,
+    itemCases = document.getElementById("item-cases"),
+    countCases = 462,
+    itemFunds = document.getElementById("item-funds"),
+    countFunds = 8700,
+    counterArea = document.querySelector(".current-count");

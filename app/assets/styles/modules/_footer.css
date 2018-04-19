@@ -1,3 +1,40 @@
 .footer {
-    
+    height: 25rem;
+    background-color: $darkBlue;
+    color: rgba(255, 255, 255, 0.25);
+    padding-top: 5rem;
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 19rem;
+        margin: 3.5rem auto 3rem auto;
+
+        &__icon {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.25);
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            padding-left: 0.6rem;
+            padding-top: 0.5rem;
+
+            & svg {
+                font-size: 1.8rem;
+                color: $darkBlue;
+            }
+        }
+    }
+
+    & p {
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        font-size: 0.85rem;
+    }
 }

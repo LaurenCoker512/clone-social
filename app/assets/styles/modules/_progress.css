@@ -1,3 +1,46 @@
 .progress {
+    height: 23rem;
+    margin-top: 5rem;
+    margin-bottom: 3.5rem;
+    color: #fff;
     
+    &__overlay {
+        padding-top: 2rem;
+        background-color: #3c576e;
+        width: 100%;
+        height: 100%;
+        opacity: 0.9;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        width: 55.625rem;
+        margin: 0 auto;
+    }
+
+    &__section {
+        width: 25%;
+        display: flex;
+
+        & svg {
+            font-size: 3rem;
+            margin-top: 3.5rem;
+            margin-right: 1rem;
+        }
+
+        &__right {
+
+            &__num {
+                font-size: 3rem;
+                color: $pinkRed;
+                margin-bottom: 0.5rem;
+            }
+
+            &__type {
+                font-family: "Roboto Slab", sans-serif;
+                margin-top: 0;
+            }
+        }
+    }
 }
