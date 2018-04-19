@@ -476,8 +476,16 @@ body {
 .about {
     display: flex;
     justify-content: space-between;
-    
+    margin-bottom: 3.5rem;
+    flex-direction: column;
 }
+
+@media (min-width: 760px) {
+
+.about {
+        flex-direction: row
+}
+    }
 
 .about__activism {
         width: 12.875rem;
@@ -504,10 +512,23 @@ body {
         }
 
 .about__text {
-        width: 28.125rem;
         font-size: 1.3rem;
         line-height: 1.4;
         color: #3c576e;
+    }
+
+@media (min-width: 760px) {
+
+.about__text {
+            width: 18rem
+    }
+    }
+
+@media (min-width: 1000px) {
+
+.about__text {
+            width: 28.125rem
+    }
     }
 
 @media (min-width: 1424px) {
@@ -518,14 +539,102 @@ body {
     }
 
 .about__membership {
-        width: 12.875rem;
+        width: 12.8rem;
+        height: 2.875rem;
+        display: flex;
+        margin: 2rem auto;
+        border: 2px solid #b83d46;
+    }
+
+@media (min-width: 760px) {
+
+.about__membership {
+            margin: 0;
+            margin-top: 2rem
+    }
+    }
+
+@media (min-width: 1000px) {
+
+.about__membership {
+            height: 5.75rem
+    }
     }
 
 @media (min-width: 1424px) {
 
 .about__membership {
-            width: 16rem
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            height: 2.875rem
     }
+    }
+
+.about__membership:hover {
+            cursor: pointer;
+        }
+
+.about__membership:hover .about__membership__icon {
+            background-color: #b83d46;
+        }
+
+.about__membership:hover .about__membership__icon__user {
+            color: #fff;
+        }
+
+.about__membership:hover .about__membership__text {
+            background-color: #fff;
+            color: #b83d46;
+        }
+
+.about__membership__icon {
+            width: 22%;
+            text-align: center;
+            transition: all 0.2s linear;
+            padding-top: 0.7rem;
+        }
+
+.about__membership__icon__user {
+                color: #b83d46;
+            }
+
+@media (min-width: 1000px) {
+
+.about__membership__icon {
+                padding-top: 1rem
+        }
+    }
+
+@media (min-width: 1424px) {
+
+.about__membership__icon {
+                padding-top: 0
+        }
+    }
+
+.about__membership__text {
+            width: 78%;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 2.5;
+            color: #fff;
+            background-color: #b83d46;
+            padding-top: 0.25rem;
+            transition: all 0.2s linear;
+        }
+
+@media (min-width: 1000px) {
+
+.about__membership__text {
+                padding: 0 1rem
+        }
+    }
+
+@media (min-width: 1424px) {
+
+.about__membership__text {
+                padding: 0
+        }
     }
 
 .buy {
@@ -949,7 +1058,7 @@ body {
 .large-hero__start {
         position: absolute;
         top: 95%;
-        left: 50%;
+        left: 54%;
     }
 
 /* color: #fff;
@@ -965,6 +1074,32 @@ body {
         border-right: 2px solid #fff;
         border-left: 2px solid #fff;
     }
+
+.large-hero__dots__dot {
+            width: 0.6rem;
+            height: 0.65rem;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 95.2%;
+        }
+
+.large-hero__dots__dot:first-of-type {
+                left: 47%;
+            }
+
+.large-hero__dots__dot:nth-of-type(2) {
+                left: 49%;
+            }
+
+.large-hero__dots__dot:nth-of-type(3) {
+                left: 51%;
+            }
+
+.large-hero__dots__dot:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+            }
 
 .main-nav {
     background-color: #b83d46;
@@ -1076,8 +1211,33 @@ body {
             }
 
 .members__section__contact {
-            border-top: 1px solid (0, 0, 0, 0.2);
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            margin-top: 1.5rem;
+            padding-top: 1rem;
         }
+
+.members__section__contact__icon {
+                display: inline-block;
+                margin-right: 0.5rem;
+                background-color: rgba(67, 87, 116, 0.4);
+                width: 1.6rem;
+                height: 1.6rem;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                padding-left: 0.4rem;
+                padding-top: 0.15rem;
+                transition: all 0.2s linear;
+            }
+
+.members__section__contact__icon:hover {
+                    cursor: pointer;
+                    background-color: #b83d46;
+                }
+
+.members__section__contact svg {
+                color: #fff;
+                font-size: 0.8rem;
+            }
 
 .news {
     margin-top: 2rem;

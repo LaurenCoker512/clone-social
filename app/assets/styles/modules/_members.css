@@ -43,7 +43,32 @@
         }
 
         &__contact {
-            border-top: 1px solid (0, 0, 0, 0.2);
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+
+            &__icon {
+                display: inline-block;
+                margin-right: 0.5rem;
+                background-color: rgba(67, 87, 116, 0.4);
+                width: 1.6rem;
+                height: 1.6rem;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                padding-left: 0.4rem;
+                padding-top: 0.15rem;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $mainRed;
+                }
+            }
+
+            & svg {
+                color: #fff;
+                font-size: 0.8rem;
+            }
         }
     }
     

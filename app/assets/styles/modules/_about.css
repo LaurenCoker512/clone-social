@@ -1,6 +1,12 @@
 .about {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3.5rem;
+    flex-direction: column;
+
+    @mixin atSmall {
+        flex-direction: row;
+    }
 
     &__activism {
         width: 12.875rem;
@@ -24,10 +30,17 @@
     }
 
     &__text {
-        width: 28.125rem;
         font-size: 1.3rem;
         line-height: 1.4;
         color: $darkBlue;
+
+        @mixin atSmall {
+            width: 18rem;
+        }
+
+        @mixin atMedium {
+            width: 28.125rem;
+        }
         
         @mixin atLarge {
             width: 35.25rem;
@@ -35,11 +48,80 @@
     }
 
     &__membership {
-        width: 12.875rem;
+        width: 12.8rem;
+        height: 2.875rem;
+        display: flex;
+        margin: 2rem auto;
+        border: 2px solid $mainRed;
+
+        @mixin atSmall {
+            margin: 0;
+            margin-top: 2rem;
+        }
+
+        @mixin atMedium {
+            height: 5.75rem;
+        }
 
         @mixin atLarge {
-            width: 16rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            height: 2.875rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover .about__membership__icon {
+            background-color: $mainRed;
+        }
+
+        &:hover .about__membership__icon__user {
+            color: #fff;
+        }
+
+        &:hover .about__membership__text {
+            background-color: #fff;
+            color: $mainRed;
+        }
+
+        &__icon {
+            width: 22%;
+            text-align: center;
+            transition: all 0.2s linear;
+            padding-top: 0.7rem;
+
+            &__user {
+                color: $mainRed;
+            }
+
+            @mixin atMedium {
+                padding-top: 1rem;
+            }
+
+            @mixin atLarge {
+                padding-top: 0;
+            }
+        }
+
+        &__text {
+            width: 78%;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 2.5;
+            color: #fff;
+            background-color: $mainRed;
+            padding-top: 0.25rem;
+            transition: all 0.2s linear;
+
+            @mixin atMedium {
+                padding: 0 1rem;
+            }
+
+            @mixin atLarge {
+                padding: 0;
+            }
         }
     }
-    
 }

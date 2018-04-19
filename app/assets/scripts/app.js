@@ -1,4 +1,4 @@
-import jarallax from "jarallax";
+// import jarallax from "jarallax";
 
 //Slider
 
@@ -12,7 +12,8 @@ var slider = tns({
     controlsContainer: ".large-hero__nav",
     autoplayText: ["", ""],
     autoplayButton: ".large-hero__start-btn",
-    autoplayButtonOutput: false
+    autoplayButtonOutput: false,
+    navContainer: ".large-hero__dots"
 });
 
 //Parallax scrolling
