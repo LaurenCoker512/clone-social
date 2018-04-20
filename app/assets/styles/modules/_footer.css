@@ -1,8 +1,20 @@
 .footer {
     height: 25rem;
+    width: 100%;
     background-color: $darkBlue;
     color: rgba(255, 255, 255, 0.25);
     padding-top: 5rem;
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+
+    @mixin atMedium {
+        width: 62.5rem;
+    }
+
+    @mixin atLarge {
+        width: 77.625rem;
+    }
 
     &__logo {
         display: block;

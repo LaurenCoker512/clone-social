@@ -930,10 +930,28 @@ body {
 
 .footer {
     height: 25rem;
+    width: 100%;
     background-color: #3c576e;
     color: rgba(255, 255, 255, 0.25);
     padding-top: 5rem;
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
 }
+
+@media (min-width: 1000px) {
+
+.footer {
+        width: 62.5rem
+}
+    }
+
+@media (min-width: 1424px) {
+
+.footer {
+        width: 77.625rem
+}
+    }
 
 .footer__logo {
         display: block;
@@ -1031,7 +1049,8 @@ body {
         }
 
 .funds {
-    
+    margin-bottom: 25rem;
+    height: 25.25rem;
 }
 
 .large-hero {
@@ -1278,17 +1297,63 @@ body {
 
 .news {
     margin-top: 2rem;
+    margin-bottom: 4.5rem;
     color: #435774;
     
 }
 
+.news__btns {
+        text-align: right;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+.news__btns__btn {
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            height: 1.7rem;
+            width: 1.7rem;
+            border-radius: 50%;
+            padding-right: 0.6rem;
+            padding-top: 0.05rem;
+            transition: all 0.2s linear;
+        }
+
+.news__btns__btn:hover {
+                cursor: pointer;
+                border: 1px solid #435774;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+.news__btns__btn:hover .news__btns__btn__arrow {
+                border: solid #fff;
+                border-width: 0 1px 1px 0;
+            }
+
+.news__btns__btn__arrow {
+                border: solid black;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 2px;
+            }
+
+.news__btns__btn__arrow--left {
+                    -webkit-transform: rotate(135deg);
+                            transform: rotate(135deg);
+                }
+
+.news__btns__btn__arrow--right {
+                    -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                }
+
 .news__content {
         display: flex;
-        justify-content: space-between;
     }
 
 .news__section {
         width: 18.25rem;
+        margin-right: 2rem;
         border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
@@ -1321,11 +1386,25 @@ body {
                 }
 
 .progress {
-    height: 23rem;
+    height: 51.8125rem;
     margin-top: 5rem;
     margin-bottom: 3.5rem;
     color: #fff;
 }
+
+@media (min-width: 760px) {
+
+.progress {
+        height: 31.75rem
+}
+    }
+
+@media (min-width: 1000px) {
+
+.progress {
+        height: 23rem
+}
+    }
 
 .progress__overlay {
         padding-top: 2rem;
@@ -1333,18 +1412,56 @@ body {
         width: 100%;
         height: 100%;
         opacity: 0.9;
+        padding-left: 4rem;
+    }
+
+@media (min-width: 1000px) {
+
+.progress__overlay {
+            padding-left: 0
+    }
     }
 
 .progress__content {
         display: flex;
         justify-content: center;
-        width: 55.625rem;
+        flex-wrap: wrap;
         margin: 0 auto;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+@media (min-width: 1000px) {
+
+.progress__content {
+            flex-wrap: nowrap;
+            width: 55.625rem
+    }
+    }
+
+@media (min-width: 1424px) {
+
+.progress__content {
+            width: 66.25rem
+    }
     }
 
 .progress__section {
-        width: 25%;
+        width: 100%;
         display: flex;
+    }
+
+@media (min-width: 760px) {
+
+.progress__section {
+            width: 50%
+    }
+    }
+
+@media (min-width: 1000px) {
+
+.progress__section {
+            width: 25%
+    }
     }
 
 .progress__section svg {
@@ -1358,6 +1475,10 @@ body {
                 color: #dd5d66;
                 margin-bottom: 0.5rem;
             }
+
+.progress__section__right__num--white {
+                    color: rgba(255, 255, 255, 0.7);
+                }
 
 .progress__section__right__type {
                 font-family: "Roboto Slab", sans-serif;
@@ -1390,7 +1511,13 @@ body {
         width: 29.375rem;
         height: 23.25rem;
         overflow: hidden;
+        position: relative;
     }
+
+.rights__center:hover img {
+            -webkit-transform: scale(1.3);
+                    transform: scale(1.3);
+        }
 
 @media (min-width: 1424px) {
 
@@ -1408,6 +1535,26 @@ body {
 .rights__center img:hover {
                 -webkit-transform: scale(1.3);
                         transform: scale(1.3);
+            }
+
+.rights__center__overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all 0.2s linear;
+            margin: 0;
+            top: 0;
+            left: 0;
+        }
+
+.rights__center__overlay:hover {
+                opacity: 1;
             }
 
 .rights__left {
@@ -1435,7 +1582,13 @@ body {
 .rights__small-section {
         height: 11.625rem;
         overflow: hidden;
+        position: relative;
     }
+
+.rights__small-section:hover img {
+            -webkit-transform: scale(1.3);
+                    transform: scale(1.3);
+        }
 
 @media (min-width: 1424px) {
 
@@ -1449,9 +1602,24 @@ body {
             transition: all 0.2s linear;
         }
 
-.rights__small-section img:hover {
-                -webkit-transform: scale(1.3);
-                        transform: scale(1.3);
+.rights__small-section__overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all 0.2s linear;
+            margin: 0;
+            top: 0;
+            left: 0;
+        }
+
+.rights__small-section__overlay:hover {
+                opacity: 1;
             }
 
 .tweets {

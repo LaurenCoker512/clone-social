@@ -20,6 +20,11 @@
         width: 29.375rem;
         height: 23.25rem;
         overflow: hidden;
+        position: relative;
+
+        &:hover img {
+            transform: scale(1.3);
+        }
 
         @mixin atLarge {
             width: 36.25rem;
@@ -32,6 +37,26 @@
 
             &:hover {
                 transform: scale(1.3);
+            }
+        }
+
+        &__overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all 0.2s linear;
+            margin: 0;
+            top: 0;
+            left: 0;
+
+            &:hover {
+                opacity: 1;
             }
         }
     }
@@ -55,6 +80,11 @@
     &__small-section {
         height: 11.625rem;
         overflow: hidden;
+        position: relative;
+
+        &:hover img {
+            transform: scale(1.3);
+        }
 
         @mixin atLarge {
             height: 14.375rem;
@@ -63,9 +93,25 @@
         & img {
             width: 100%;
             transition: all 0.2s linear;
+        }
+
+        &__overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: all 0.2s linear;
+            margin: 0;
+            top: 0;
+            left: 0;
 
             &:hover {
-                transform: scale(1.3);
+                opacity: 1;
             }
         }
     }

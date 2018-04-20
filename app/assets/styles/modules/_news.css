@@ -1,14 +1,58 @@
 .news {
     margin-top: 2rem;
+    margin-bottom: 4.5rem;
     color: $darkGrayBlue;
+
+    &__btns {
+        text-align: right;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+
+        &__btn {
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            height: 1.7rem;
+            width: 1.7rem;
+            border-radius: 50%;
+            padding-right: 0.6rem;
+            padding-top: 0.05rem;
+            transition: all 0.2s linear;
+
+            &:hover {
+                cursor: pointer;
+                border: 1px solid $darkGrayBlue;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            &:hover .news__btns__btn__arrow {
+                border: solid #fff;
+                border-width: 0 1px 1px 0;
+            }
+
+            &__arrow {
+                border: solid black;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 2px;
+
+                &--left {
+                    transform: rotate(135deg);
+                }
+
+                &--right {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
 
     &__content {
         display: flex;
-        justify-content: space-between;
     }
 
     &__section {
         width: 18.25rem;
+        margin-right: 2rem;
         border: 1px solid rgba(0, 0, 0, 0.1);
 
         &__img {

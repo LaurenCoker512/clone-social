@@ -1,8 +1,16 @@
 .progress {
-    height: 23rem;
+    height: 51.8125rem;
     margin-top: 5rem;
     margin-bottom: 3.5rem;
     color: #fff;
+
+    @mixin atSmall {
+        height: 31.75rem;
+    }
+
+    @mixin atMedium {
+        height: 23rem;
+    }
     
     &__overlay {
         padding-top: 2rem;
@@ -10,18 +18,41 @@
         width: 100%;
         height: 100%;
         opacity: 0.9;
+        padding-left: 4rem;
+
+        @mixin atMedium {
+            padding-left: 0;
+        }
     }
 
     &__content {
         display: flex;
         justify-content: center;
-        width: 55.625rem;
+        flex-wrap: wrap;
         margin: 0 auto;
+        color: rgba(255, 255, 255, 0.7);
+
+        @mixin atMedium {
+            flex-wrap: nowrap;
+            width: 55.625rem;
+        }
+
+        @mixin atLarge {
+            width: 66.25rem;
+        }
     }
 
     &__section {
-        width: 25%;
+        width: 100%;
         display: flex;
+
+        @mixin atSmall {
+            width: 50%;
+        }
+
+        @mixin atMedium {
+            width: 25%;
+        }
 
         & svg {
             font-size: 3rem;
@@ -35,6 +66,10 @@
                 font-size: 3rem;
                 color: $pinkRed;
                 margin-bottom: 0.5rem;
+
+                &--white {
+                    color: rgba(255, 255, 255, 0.7);
+                }
             }
 
             &__type {
