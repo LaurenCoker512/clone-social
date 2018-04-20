@@ -46,14 +46,28 @@
         }
     }
 
+    &__viewport {
+        width: 58.75rem;
+        margin: 0 auto;
+    }
+
     &__content {
         display: flex;
     }
 
     &__section {
         width: 18.25rem;
-        margin-right: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
         border: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
 
         &__img {
             height: 14.5rem;

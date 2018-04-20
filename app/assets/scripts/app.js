@@ -80,6 +80,7 @@ var sliderNews = tns({
     controlsContainer: ".news__btns",
     autoplayText: ["", ""],
     autoplayButton: ".news__nav",
+    rewind: true,
     responsive: {
         760: {
             items: 2
