@@ -72,7 +72,6 @@ new Waypoint({
 var sliderNews = tns({
     container: ".news__content",
     items: 1,
-    slideBy: 1,
     autoplay: true,
     speed: 2000,
     nav: false,
@@ -81,6 +80,7 @@ var sliderNews = tns({
     autoplayText: ["", ""],
     autoplayButton: ".news__nav",
     rewind: true,
+    fixedWidth: 292,
     responsive: {
         760: {
             items: 2
@@ -89,7 +89,8 @@ var sliderNews = tns({
             items: 3
         },
         1424: {
-            items: 4
+            items: 4,
+            fixedWidth: 268
         }
     }
 });

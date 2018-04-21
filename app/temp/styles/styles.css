@@ -1352,7 +1352,15 @@ body {
         margin: 0 auto;
     }
 
+@media (min-width: 1424px) {
+
+.news__viewport {
+            width: 72.625rem
+    }
+    }
+
 .news__content {
+        width: 58.75rem;
         display: flex;
     }
 
@@ -1361,6 +1369,13 @@ body {
         margin-left: 1rem;
         margin-right: 1rem;
         border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+@media (min-width: 1424px) {
+
+.news__section {
+            width: 16.75rem
+    }
     }
 
 .news__section:first-of-type {

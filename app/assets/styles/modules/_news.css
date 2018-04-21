@@ -49,9 +49,14 @@
     &__viewport {
         width: 58.75rem;
         margin: 0 auto;
+
+        @mixin atLarge {
+            width: 72.625rem;
+        }
     }
 
     &__content {
+        width: 58.75rem;
         display: flex;
     }
 
@@ -60,6 +65,10 @@
         margin-left: 1rem;
         margin-right: 1rem;
         border: 1px solid rgba(0, 0, 0, 0.1);
+
+        @mixin atLarge {
+            width: 16.75rem;
+        }
 
         &:first-of-type {
             margin-left: 0;
