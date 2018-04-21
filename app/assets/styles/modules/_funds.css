@@ -1,4 +1,8 @@
 .funds {
     margin-bottom: 25rem;
     height: 25.25rem;
+
+    &__section {
+        width: 25%;
+    }
 }

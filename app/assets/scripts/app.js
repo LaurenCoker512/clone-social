@@ -1,5 +1,6 @@
 import CountUp from "countup.js";
 import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
+import Chart from "chart.js";
 
 //Slider
 
@@ -92,5 +93,25 @@ var sliderNews = tns({
             items: 4,
             fixedWidth: 268
         }
+    }
+});
+
+//Donut Chart
+
+var myChart = new Chart(document.getElementById("funds__animals"), {
+    type: "doughnut",
+    data: {
+        datasets: [
+            {
+                backgroundColor: ["#b83d46", "#ffffff"],
+                data: [82, 18]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: false
+        },
+        cutoutPercentage: 80
     }
 });
