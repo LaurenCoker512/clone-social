@@ -72,8 +72,8 @@
                 --><li class="main-nav__nav__main-menu__item"><a href="#">Donation</a></li><!--
                 --><li class="main-nav__nav__main-menu__item"><a href="#">Shop</a></li><!--
                 --><li class="main-nav__nav__main-menu__item"><a href="#">News</a></li><!--
-                --><li class="main-nav__nav__main-menu__item"><a href="#">Shortcodes</a></li><!--
-                --><li class="main-nav__nav__main-menu__item"><a href="#">Post Types</a></li><!--
+                --><li class="main-nav__nav__main-menu__item"><a href="#"><i class="fas fa-star main-nav__nav__main-menu__item__icon"></i>Shortcodes</a></li><!--
+                --><li class="main-nav__nav__main-menu__item"><a href="#"><i class="fas fa-pencil-alt main-nav__nav__main-menu__item__icon"></i>Post Types</a></li><!--
             --></ul>
             </nav>
         </div>
@@ -99,9 +99,21 @@
             <div class="large-hero__start-btn"></div>
         </div>
         <div class="large-hero__dots">
-            <div class="large-hero__dots__dot"></div>
-            <div class="large-hero__dots__dot"></div>
-            <div class="large-hero__dots__dot"></div>
+            <div class="large-hero__dots__dot">
+                <div class="large-hero__dots__dot__preview">
+                    <div class="large-hero__dots__dot__preview__triangle large-hero__dots__dot__preview__triangle--image1"></div>
+                </div>
+            </div>
+            <div class="large-hero__dots__dot">
+                <div class="large-hero__dots__dot__preview">
+                    <div class="large-hero__dots__dot__preview__triangle large-hero__dots__dot__preview__triangle--image2"></div>
+                </div>
+            </div>
+            <div class="large-hero__dots__dot">
+                <div class="large-hero__dots__dot__preview">
+                    <div class="large-hero__dots__dot__preview__triangle large-hero__dots__dot__preview__triangle--image3"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -135,36 +147,6 @@
             <div class="about__membership__text">Become a Member</div>
         </div>
     </section>
-
-    <!-- <section class="rights">
-        <h2 class="section__title rights__title">Get Up For Your Rights</h2>
-        <div class="section__wrapper rights__content">
-            <div class="rights__left">
-                <div class="rights__small-section">
-                    <img class="rights__small-section__img" src="assets/images/14399349467_c21535a0bb_kv1.jpg">
-                    <div class="rights__small-section__overlay"></div>
-                </div>
-                <div class="rights__small-section">
-                    <img src="assets/images/5130130623_28cfe489a8_bv11.jpg">
-                    <div class="rights__small-section__overlay"></div>     
-                </div>
-            </div>
-            <div class="rights__center">
-                <img src="assets/images/6810389620_d48d6be44b_k2231.jpg">
-                <div class="rights__center__overlay"></div>
-            </div>
-            <div class="rights__right">
-                <div class="rights__small-section">
-                    <img src="assets/images/4737400406_9926239476_o211.jpg">
-                    <div class="rights__small-section__overlay"></div>
-                </div>
-                <div class="rights__small-section">
-                    <img src="assets/images/3300270063_cd9d64035f_o1.jpg">
-                    <div class="rights__small-section__overlay"></div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <section class="rights">
         <h2 class="section__title rights__title">Get Up For Your Rights</h2>
@@ -486,6 +468,7 @@
                 <div class="news__section">
                     <div class="news__section__img">
                         <img src="assets/images/1215059399_c2feee8b6d_o11-580x460.jpg">
+                        <div class="news__section__img__overlay"></div>
                     </div>
                     <div class="news__section__description">
                         <h3 class="news__section__description__title">Glasses Rally</h3>
@@ -498,6 +481,7 @@
                 <div class="news__section">
                     <div class="news__section__img">
                         <img src="assets/images/13915743147_b7fa1b061f_k1.jpg">
+                        <div class="news__section__img__overlay"></div>
                     </div>
                     <div class="news__section__description">
                         <h3 class="news__section__description__title">Save Animals of Africa</h3>
@@ -510,6 +494,7 @@
                 <div class="news__section">
                     <div class="news__section__img">
                         <img src="assets/images/5453524825_3525411a1b_b11.jpg">
+                        <div class="news__section__img__overlay"></div>
                     </div>
                     <div class="news__section__description">
                         <h3 class="news__section__description__title">Care About Educators</h3>
@@ -522,6 +507,7 @@
                 <div class="news__section">
                     <div class="news__section__img">
                         <img src="assets/images/7429491560_9f4c67ddaf_k1.jpg">
+                        <div class="news__section__img__overlay"></div>
                     </div>
                     <div class="news__section__description">
                         <h3 class="news__section__description__title">Broken Flower</h3>
@@ -566,16 +552,32 @@
         <h2 class="section__title">Collected Funds</h2>
         <div class="section__wrapper funds__content">
             <div class="funds__section">
-                <canvas id="funds__animals" width="120" height="95"></canvas>
+                <canvas id="funds__animals" width="120" height="100"></canvas>
+                <div class="funds__section__text">
+                    <p class="funds__section__text__type">Save Animals</p>
+                    <p class="funds__section__text__amount">82%</p>
+                </div>
             </div>
-            <div class="funds__section" id="funds__rights">
-                
+            <div class="funds__section">
+                <canvas id="funds__rights" width="120" height="100"></canvas>
+                <div class="funds__section__text">
+                    <p class="funds__section__text__type">Human Rights</p>
+                    <p class="funds__section__text__amount">76%</p>
+                </div>
             </div>
-            <div class="funds__section" id="funds__reforms">
-                
+            <div class="funds__section">
+                <canvas id="funds__reforms" width="120" height="100"></canvas>
+                <div class="funds__section__text">
+                    <p class="funds__section__text__type">Reforms</p>
+                    <p class="funds__section__text__amount">89%</p>
+                </div>
             </div>
-            <div class="funds__section" id="funds__water">
-                
+            <div class="funds__section">
+                <canvas id="funds__water" width="120" height="100"></canvas>
+                <div class="funds__section__text">
+                    <p class="funds__section__text__type">Clean Water</p>
+                    <p class="funds__section__text__amount">66%</p>
+                </div>
             </div>
         </div>
     </section>

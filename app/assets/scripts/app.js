@@ -98,13 +98,72 @@ var sliderNews = tns({
 
 //Donut Chart
 
-var myChart = new Chart(document.getElementById("funds__animals"), {
+var idAnimalChart = document.getElementById("funds__animals");
+var idRightsChart = document.getElementById("funds__rights");
+var idReformsChart = document.getElementById("funds__reforms");
+var idWaterChart = document.getElementById("funds__water");
+
+var animalChart = new Chart(idAnimalChart, {
     type: "doughnut",
     data: {
         datasets: [
             {
                 backgroundColor: ["#b83d46", "#ffffff"],
                 data: [82, 18]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: false
+        },
+        cutoutPercentage: 80
+    }
+});
+
+var rightsChart = new Chart(idRightsChart, {
+    type: "doughnut",
+    data: {
+        datasets: [
+            {
+                backgroundColor: ["#585a73", "#ffffff"],
+                data: [76, 24]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: false
+        },
+        cutoutPercentage: 80
+    }
+});
+
+var reformsChart = new Chart(idReformsChart, {
+    type: "doughnut",
+    data: {
+        datasets: [
+            {
+                backgroundColor: ["#435774", "#ffffff"],
+                data: [89, 11]
+            }
+        ]
+    },
+    options: {
+        title: {
+            display: false
+        },
+        cutoutPercentage: 80
+    }
+});
+
+var waterChart = new Chart(idWaterChart, {
+    type: "doughnut",
+    data: {
+        datasets: [
+            {
+                backgroundColor: ["#3c576e", "#ffffff"],
+                data: [66, 34]
             }
         ]
     },

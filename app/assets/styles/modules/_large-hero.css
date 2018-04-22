@@ -95,6 +95,49 @@
                 background-color: rgba(0, 0, 0, 0.2);
                 cursor: pointer;
             }
+
+            &:hover .large-hero__dots__dot__preview {
+                opacity: 1;
+            }
+
+            &__preview {
+                position: absolute;
+                right: 5.5rem;
+                bottom: 1.6rem;
+                left: -2.5rem;
+                z-index: 10;
+                opacity: 0;
+                transition: all 0.2s linear;
+                width: 6.5rem;
+                height: 4rem;
+                border: 2px solid #fff;
+
+                &__triangle {
+                    position: absolute;
+                    background: #fff;
+                    border-radius: .4em;
+                    bottom: -1.1rem;
+                    left: 50%;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 1rem;
+                        left: 55%;
+                        width: 0;
+                        height: 0;
+                        border: 5px solid transparent;
+                        border-top-color: #fff;
+                        border-bottom: 0;
+                        margin-left: -5px;
+                        margin-bottom: -5px;
+                    }
+                }
+                
+                &--image1 {
+                    background-image: url("../../../assets/images/slide11.jpg");
+                }
+            }
         }
     }
 }
