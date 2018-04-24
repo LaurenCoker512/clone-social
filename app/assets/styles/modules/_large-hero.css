@@ -18,9 +18,24 @@
     }
 
     &__img {
+        position: relative;
 
         & img {
             width: 100%;
+        }
+
+        &__title {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "Roboto Slab", sans-serif;
+            font-size: 3rem;
+
+            &--center {
+                left: 22%;
+            }
         }
     }
 
@@ -104,7 +119,7 @@
                 position: absolute;
                 right: 5.5rem;
                 bottom: 1.6rem;
-                left: -2.5rem;
+                left: -3rem;
                 z-index: 10;
                 opacity: 0;
                 transition: all 0.2s linear;
@@ -136,6 +151,23 @@
                 
                 &--image1 {
                     background-image: url("../../../assets/images/slide11.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                &--image2 {
+                    background-image: url("../../../assets/images/bg-slider-3-41.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                &--image3 {
+                    background-image: url("../../../assets/images/bg-slider1.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
                 }
             }
         }

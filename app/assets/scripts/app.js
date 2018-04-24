@@ -96,6 +96,23 @@ var sliderNews = tns({
     }
 });
 
+//Tweet Slider
+
+var tweetSlider = tns({
+    container: ".tweets__slider",
+    mode: "gallery",
+    items: 1,
+    slideBy: 1,
+    autoplay: true,
+    speed: 1200,
+    controlsText: "",
+    controlsContainer: ".tweets__nav",
+    autoplayText: ["", ""],
+    autoplayButton: ".large-hero__start-btn",
+    autoplayButtonOutput: false,
+    nav: false
+});
+
 //Donut Chart
 
 var idAnimalChart = document.getElementById("funds__animals");

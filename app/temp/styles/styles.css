@@ -1167,9 +1167,27 @@ body {
     }
     }
 
+.large-hero__img {
+        position: relative;
+    }
+
 .large-hero__img img {
             width: 100%;
         }
+
+.large-hero__img__title {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "Roboto Slab", sans-serif;
+            font-size: 3rem;
+        }
+
+.large-hero__img__title--center {
+                left: 22%;
+            }
 
 .large-hero__arrow {
         position: absolute;
@@ -1253,7 +1271,7 @@ body {
                 position: absolute;
                 right: 5.5rem;
                 bottom: 1.6rem;
-                left: -2.5rem;
+                left: -3rem;
                 z-index: 10;
                 opacity: 0;
                 transition: all 0.2s linear;
@@ -1286,6 +1304,23 @@ body {
 
 .large-hero__dots__dot__preview--image1 {
                     background-image: url("../../../assets/images/slide11.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+.large-hero__dots__dot__preview--image2 {
+                    background-image: url("../../../assets/images/bg-slider-3-41.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+.large-hero__dots__dot__preview--image3 {
+                    background-image: url("../../../assets/images/bg-slider1.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
                 }
 
 .main-nav {
@@ -1525,6 +1560,7 @@ body {
             height: 14.5rem;
             overflow: hidden;
             position: relative;
+
         }
 
 .news__section__img img {
@@ -1551,6 +1587,40 @@ body {
                     opacity: 1;
                 }
 
+.news__section__img__overlay__btn {
+                    transition: background-color 0.2s linear, color 0.2s linear, -webkit-transform 0.4s linear;
+                    transition: transform 0.4s linear, background-color 0.2s linear, color 0.2s linear;
+                    transition: transform 0.4s linear, background-color 0.2s linear, color 0.2s linear, -webkit-transform 0.4s linear;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border: none;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    color: #fff;
+                }
+
+.news__section__img__overlay__btn--left {
+                        -webkit-transform: translateX(-500%);
+                                transform: translateX(-500%);
+                        margin-right: 0.3rem;
+                    }
+
+.news__section__img__overlay__btn--right {
+                        -webkit-transform: translateX(500%);
+                                transform: translateX(500%);
+                        margin-left: 0.3rem;
+                    }
+
+.news__section__img__overlay__btn:hover {
+                        background-color: #fff;
+                        color: #3c576e;
+                        cursor: pointer;
+                    }
+
+.news__section__img__overlay:hover .news__section__img__overlay__btn {
+                    -webkit-transform: translateX(0);
+                            transform: translateX(0);
+                }
+
 .news__section__description {
             margin-left: 1rem;
         }
@@ -1558,6 +1628,7 @@ body {
 .news__section__description__title {
                 font-family: "Roboto Slab", sans-serif;
                 margin-bottom: 0;
+                font-size: 1rem;
             }
 
 .news__section__description__tags {
@@ -1569,6 +1640,38 @@ body {
                     text-decoration: none;
                     color: #b83d46;
                 }
+
+.news__section__stats {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            font-family: "Roboto Slab", sans-serif;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            padding: 1rem;
+        }
+
+.news__section__stats__date {
+                width: 70%;
+            }
+
+.news__section__stats__response {
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+            }
+
+.news__icon {
+        margin-left: 0.3rem;
+    }
+
+.news__icon--hover {
+            transition: all 0.2s linear;
+        }
+
+.news__icon--hover:hover {
+                color: #b83d46;
+                cursor: pointer;
+            }
 
 .progress {
     height: 51.8125rem;
