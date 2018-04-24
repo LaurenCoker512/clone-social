@@ -25,9 +25,14 @@
                 padding: 0.85rem 1.5rem;
                 border-left: 0.4px solid rgba(255, 255, 255, 0.5);
                 margin: 0;
+                position: relative;
 
                 &:hover {
                     background-color: rgba(0, 0, 0, 0.15);
+                }
+
+                &:hover .main-nav__nav__submenu {
+                    display: flex;
                 }
 
                 & a {
@@ -43,6 +48,57 @@
 
                 &__icon {
                     margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &__submenu {
+            display: none;
+            position: absolute;
+            justify-content: space-between;
+            top: 2.8rem;
+            left: -31rem;
+            background-color: #fff;
+            color: rgba(0, 0, 0, 0.6);
+            z-index: 11;
+            width: 54.5rem;
+            padding: 3rem 2rem 1.5rem 2rem;
+
+            &--post {
+                left: -44.1rem;
+                padding: 1.5rem 2rem;
+            }
+
+            &__col {
+
+                & h3 {
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    margin-left: 1rem;
+                    font-weight: 700;
+                }
+
+                & ul {
+                    list-style: none;
+                    padding-left: 0;
+                }
+            }
+
+            &__item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 0.81rem 1rem;
+                font-family: "Arial", sans-serif;
+                font-size: 0.8rem;
+                transition: all 0.2s linear;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.05);
+                    color: rgba(0, 0, 0, 0.8);
+                    cursor: pointer;
                 }
             }
         }

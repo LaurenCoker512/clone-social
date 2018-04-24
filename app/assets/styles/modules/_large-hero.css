@@ -24,19 +24,47 @@
             width: 100%;
         }
 
-        &__title {
+        &__text {
             position: absolute;
             top: 20%;
-            left: 10%;
+            left: 7%;
             color: #fff;
             text-transform: uppercase;
-            font-family: "Roboto Slab", sans-serif;
-            font-size: 3rem;
+
+            &__title {
+                font-family: "Roboto Slab", sans-serif;
+                font-size: 3.2rem;
+                margin-bottom: 1rem;
+                animation: slideIn 1s 0.4s 1 forwards;
+                opacity: 0;
+            }
+
+            &__subtitle {
+                font-size: 1.5rem;
+                margin-top: 0;
+                margin-bottom: 2rem;
+                animation: slideIn 1s 1s 1 forwards;
+                opacity: 0;
+            }
+
+            &__description {
+                text-transform: none;
+                font-size: 0.9rem;
+                max-width: 16rem;
+                color: rgba(0, 0, 0, 0.6);
+                animation: slideIn 1s 1.5s 1 forwards;
+                opacity: 0;
+            }
 
             &--center {
                 left: 22%;
+                top: 40%;
+                animation: slideDown 1s 0.4s 1 forwards;
+                opacity: 0;
             }
         }
+
+        
     }
 
     &__arrow {
@@ -171,5 +199,27 @@
                 }
             }
         }
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
