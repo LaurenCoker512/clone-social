@@ -382,6 +382,7 @@ body {
         text-transform: uppercase;
         text-align: center;
         font-size: 1.8rem;
+        font-weight: 400;
     }
 
 .section__wrapper {
@@ -2464,13 +2465,12 @@ body {
 
 .return-btn {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #21201e;
-    border: none; 
-    padding-top: 0.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: rgba(67, 87, 116, 0.5);
+    border: 1px solid transparent; 
+    width: 3rem;
+    height: 3rem;
     transition: all 0.2s linear;
     visibility: hidden;
     opacity: 0;
@@ -2485,14 +2485,21 @@ body {
 
 .return-btn__arrow {
         border: solid #fff;
-        border-width: 0 2px 2px 0;
+        border-width: 0 1.5px 1.5px 0;
         display: inline-block;
-        padding: 5px;
+        padding: 2.5px;
         -webkit-transform: rotate(-135deg);
                 transform: rotate(-135deg);
+        transition: all 0.2s linear;
     }
 
 .return-btn:hover {
         cursor: pointer;
-        background-color: #3d3d3d;
+        background-color: #fff;
+        border: 1px solid rgba(67, 87, 116, 0.3);
+    }
+
+.return-btn:hover .return-btn__arrow {
+        border: solid #435774;
+        border-width: 0 1.5px 1.5px 0;
     }

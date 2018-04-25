@@ -5,6 +5,7 @@ import $ from "jquery";
 
 window.onscroll = function() {
     stickyHeader();
+    checkBtn();
 };
 
 window.onresize = function() {
