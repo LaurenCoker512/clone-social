@@ -4,6 +4,20 @@
     height: 2.125rem;
     padding: 0.5rem 2rem;
 
+    &--sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        @mixin atMedium {
+            width: 62.5rem;
+        }
+    
+        @mixin atLarge {
+            width: 77.625rem;
+        }
+    }
+
     &__content {
         display: none;
 

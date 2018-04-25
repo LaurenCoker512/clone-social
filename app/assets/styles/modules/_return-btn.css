@@ -1,0 +1,33 @@
+.return-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #21201e;
+    border: none; 
+    padding-top: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: all 0.2s linear;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+    z-index: 1000;
+
+    &--revealed {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__arrow {
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(-135deg);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: #3d3d3d;
+    }
+}

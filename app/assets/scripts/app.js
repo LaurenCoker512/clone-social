@@ -1,6 +1,84 @@
 import CountUp from "countup.js";
 import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints";
 import Chart from "chart.js";
+import $ from "jquery";
+
+window.onscroll = function() {
+    stickyHeader();
+};
+
+window.onresize = function() {
+    removeStickyHeader();
+    stickyHeader();
+};
+
+//Smooth scrolling
+
+var returnBtn = document.querySelector(".return-btn");
+var largeHero = document.querySelector(".large-hero");
+var largeHeroBottom = largeHero.offsetTop;
+
+function checkBtn() {
+    if (window.pageYOffset >= largeHeroBottom) {
+        returnBtn.classList.add("return-btn--revealed");
+    } else {
+        returnBtn.classList.remove("return-btn--revealed");
+    }
+}
+
+$(function() {
+    // This will select everything with the class smoothScroll
+    // This should prevent problems with carousel, scrollspy, etc...
+    $('.smoothScroll').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 800); // The number here represents the speed of the scroll in milliseconds
+          target.focus(); // Setting focus
+          if (target.is(":focus")){ // Checking if the target was focused
+            return false;
+          } else {
+            target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            target.focus(); // Setting focus
+          };
+          return false;
+        }
+      }
+    });
+  });
+
+//Sticky Header on Scroll
+
+var header = document.querySelector(".top-wrapper");
+var headerLogo = document.querySelector(".header-logo");
+// var sticky = header.offsetTop;
+var sticky = 34;
+
+function stickyHeader() {
+    if (window.innerWidth >= 1000) {
+        if (window.pageYOffset >= sticky) {
+            header.classList.add("header--sticky");
+            headerLogo.classList.add("header-logo--sticky");
+        } else if (window.innerWidth <= 1000 && header.classList.contains("header--sticky")) {
+            header.classList.remove("header--sticky");
+            headerLogo.classList.remove("header-logo--sticky");
+        }
+        else {
+            header.classList.remove("header--sticky");
+            headerLogo.classList.remove("header-logo--sticky");
+        }
+    }
+}
+
+function removeStickyHeader() {
+    if (window.innerWidth < 1000) {
+        header.classList.remove("header--sticky");
+        headerLogo.classList.remove("header-logo--sticky");
+    }
+}
 
 //Slider
 
@@ -191,3 +269,4 @@ var waterChart = new Chart(idWaterChart, {
         cutoutPercentage: 80
     }
 });
+

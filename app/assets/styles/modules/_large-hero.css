@@ -27,40 +27,68 @@
         &__text {
             position: absolute;
             top: 20%;
-            left: 7%;
+            left: 6%;
             color: #fff;
             text-transform: uppercase;
 
             &__title {
                 font-family: "Roboto Slab", sans-serif;
-                font-size: 3.2rem;
+                font-size: 5vw;
                 margin-bottom: 1rem;
                 animation: slideIn 1s 0.4s 1 forwards;
                 opacity: 0;
+
+                @mixin atMedium {
+                    font-size: 3.2rem;
+                }
+
+                @mixin atLarge {
+                    font-size: 4rem;
+                }
             }
 
             &__subtitle {
-                font-size: 1.5rem;
+                font-size: 2.15vw;
                 margin-top: 0;
-                margin-bottom: 2rem;
                 animation: slideIn 1s 1s 1 forwards;
                 opacity: 0;
+                font-weight: 300;
+                margin-bottom: 1rem;
+
+                @mixin atMedium {
+                    font-size: 1.5rem; 
+                    margin-bottom: 2rem;
+                }
             }
 
             &__description {
                 text-transform: none;
-                font-size: 0.9rem;
-                max-width: 16rem;
+                font-size: 1.5vw;
+                max-width: 30%;
                 color: rgba(0, 0, 0, 0.6);
                 animation: slideIn 1s 1.5s 1 forwards;
                 opacity: 0;
+
+                @mixin atMedium {
+                    font-size: 0.9rem;
+                    max-width: 16rem;
+                }
             }
 
             &--center {
                 left: 22%;
+                right: 22%;
                 top: 40%;
                 animation: slideDown 1s 0.4s 1 forwards;
                 opacity: 0;
+
+                @mixin atMedium {
+                    left: 22%;
+                }
+
+                @mixin atLarge {
+                    left: 23%;
+                }
             }
         }
 
@@ -93,12 +121,21 @@
         }
     }
 
+    &__all-nav {
+        position: absolute;
+        bottom: 6%;
+        left: 45%;
+        display: inline-block;
+
+        @mixin atMedium {
+            top: 95%;
+        }
+    }
+
     &__start {
         position: absolute;
-        top: 95%;
-        left: 54%;
-        /* color: #fff;
-        font-size: 0.5rem; */
+        top: 0.2rem;
+        right: -1rem;
 
         &:hover {
             cursor: pointer;
@@ -119,20 +156,10 @@
             height: 0.65rem;
             border: 2px solid #fff;
             border-radius: 50%;
-            position: absolute;
-            top: 95.2%;
-
-            &:first-of-type {
-                left: 47%;
-            }
-
-            &:nth-of-type(2) {
-                left: 49%;
-            }
-
-            &:nth-of-type(3) {
-                left: 51%;
-            }
+            position: relative;
+            margin-top: 0.2rem;
+            margin-right: 0.5rem;
+            display: inline-block;
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.2);

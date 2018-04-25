@@ -3,6 +3,14 @@
     display: flex;
     justify-content: space-between;
     padding-top: 2.2rem;
+    background-color: #fff;
+    z-index: 15;
+    transition: all 0.1s linear;
+
+    &--sticky {
+        height: 4rem;
+        padding-top: 1rem;
+    }
 
     &__section {
 
@@ -22,4 +30,8 @@
             }
         }
     }
+}
+
+.top-wrapper {
+    z-index: 999;
 }
