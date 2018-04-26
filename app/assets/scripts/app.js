@@ -16,14 +16,17 @@ window.onresize = function() {
 //Smooth scrolling
 
 var returnBtn = document.querySelector(".return-btn");
+var returnArrow = document.querySelector(".return-btn__arrow");
 var largeHero = document.querySelector(".large-hero");
 var largeHeroBottom = largeHero.offsetTop;
 
 function checkBtn() {
     if (window.pageYOffset >= largeHeroBottom) {
         returnBtn.classList.add("return-btn--revealed");
+        returnArrow.classList.add("return-btn__arrow--revealed");
     } else {
         returnBtn.classList.remove("return-btn--revealed");
+        returnArrow.classList.add("return-btn__arrow--revealed");
     }
 }
 

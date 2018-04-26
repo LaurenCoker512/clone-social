@@ -24,6 +24,11 @@
         padding: 2.5px;
         transform: rotate(-135deg);
         transition: all 0.2s linear;
+        visibility: hidden;
+
+        &--revealed {
+            visibility: visible;
+        }
     }
 
     &:hover {
