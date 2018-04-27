@@ -8,6 +8,48 @@
         height: 2.8125rem;
     }
 
+    &__mini-nav {
+        display: flex;
+        justify-content: center;
+
+        &__bars {
+            width: 2.4rem;
+            height: 2.2rem;
+            background-color: transparent;
+            margin-top: 1.3rem;
+
+            & svg {
+                transform: translateX(20%) translateY(-130%);
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $darkGrayBlue;
+            }
+
+            &:hover .main-nav__mini-nav__bars__icon {
+                transform: translateX(20%) translateY(-130%) scale(1.1);
+            }
+        }
+
+        &__shopping {
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+        
+        & svg {
+            margin: 1.8rem 0.6rem;
+        }
+
+        @mixin atMedium {
+            display: none;
+        }
+        
+    }
+
     &__nav {
         display: none;
 

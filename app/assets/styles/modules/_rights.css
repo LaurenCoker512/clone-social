@@ -115,7 +115,10 @@
             }
 
             &:hover .rights__small-section__overlay__description {
-                transform: translateY(0);
+
+                @mixin atSmall {
+                    transform: translateY(0);
+                }
             }
         }
     }
@@ -124,6 +127,12 @@
         overflow: hidden;
         width: 50%;
         position: relative;
+        margin-bottom: 4.5rem;
+
+        @mixin atSmall {
+            margin-bottom: 0;
+            overflow: hidden;
+        }
 
         &:hover img {
             transform: scale(1.3);
@@ -198,13 +207,19 @@
 
             &__description {
                 position: absolute;
-                bottom: 0;
+                bottom: -4.5rem;
                 height: 4.5rem;
                 width: 100%;
                 background-color: #fff;
-                transform: translateY(500%);
-                transition: transform 0.2s linear;
+                transition: transform 0.3s linear;
                 padding-left: 2rem;
+                opacity: 1;
+
+                @mixin atSmall {
+                    bottom: 0;
+                    transform: translateY(500%);
+                    opacity:
+                }
 
                 & h3 {
                     color: $darkGrayBlue;
@@ -234,7 +249,11 @@
             }
 
             &:hover .rights__small-section__overlay__description {
-                transform: translateY(0);
+                
+                @mixin atSmall {
+                    transform: translateY(0);
+                }
+                
             }
         }
     }

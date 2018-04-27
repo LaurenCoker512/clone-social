@@ -893,6 +893,11 @@ body {
                 border-top: none;
             }
 
+.donate__options__option--active {
+                color: #585a73;
+                background-color: #fff;
+            }
+
 .donate__text {
         width: 100%;
         font-family: "Roboto Slab", sans-serif;
@@ -900,6 +905,7 @@ body {
         line-height: 1.7;
         color: rgba(255, 255, 255, 0.75);
         margin-top: 1rem;
+
     }
 
 @media (min-width: 524px) {
@@ -907,8 +913,17 @@ body {
 .donate__text {
             width: 61%;
             margin-top: 0
+
     }
     }
+
+.donate__description {
+        display: none;
+    }
+
+.donate__description--active {
+            display: block;
+        }
 
 .donate__btn {
         color: #585a73;
@@ -1487,6 +1502,52 @@ body {
 .main-nav {
         height: 2.8125rem
 }
+    }
+
+.main-nav__mini-nav {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+.main-nav__mini-nav__bars {
+            width: 2.4rem;
+            height: 2.2rem;
+            background-color: transparent;
+            margin-top: 1.3rem;
+        }
+
+.main-nav__mini-nav__bars svg {
+                -webkit-transform: translateX(20%) translateY(-130%);
+                        transform: translateX(20%) translateY(-130%);
+            }
+
+.main-nav__mini-nav__bars:hover {
+                cursor: pointer;
+                background-color: #435774;
+            }
+
+.main-nav__mini-nav__bars:hover .main-nav__mini-nav__bars__icon {
+                -webkit-transform: translateX(20%) translateY(-130%) scale(1.1);
+                        transform: translateX(20%) translateY(-130%) scale(1.1);
+            }
+
+.main-nav__mini-nav__shopping:hover {
+                cursor: pointer;
+                -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+            }
+
+.main-nav__mini-nav svg {
+            margin: 1.8rem 0.6rem;
+        }
+
+@media (min-width: 1000px) {
+
+.main-nav__mini-nav {
+            display: none
+        
+    }
     }
 
 .main-nav__nav {
@@ -2171,15 +2232,27 @@ body {
                         transform: translateX(0);
             }
 
+@media (min-width: 760px) {
+
 .rights__center__overlay:hover .rights__small-section__overlay__description {
-                -webkit-transform: translateY(0);
-                        transform: translateY(0);
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0)
             }
+    }
 
 .rights__small-section {
         overflow: hidden;
         width: 50%;
         position: relative;
+        margin-bottom: 4.5rem;
+    }
+
+@media (min-width: 760px) {
+
+.rights__small-section {
+            margin-bottom: 0;
+            overflow: hidden
+    }
     }
 
 .rights__small-section:hover img {
@@ -2270,17 +2343,26 @@ body {
 
 .rights__small-section__overlay__description {
                 position: absolute;
-                bottom: 0;
+                bottom: -4.5rem;
                 height: 4.5rem;
                 width: 100%;
                 background-color: #fff;
-                -webkit-transform: translateY(500%);
-                        transform: translateY(500%);
-                transition: -webkit-transform 0.2s linear;
-                transition: transform 0.2s linear;
-                transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+                transition: -webkit-transform 0.3s linear;
+                transition: transform 0.3s linear;
+                transition: transform 0.3s linear, -webkit-transform 0.3s linear;
                 padding-left: 2rem;
+                opacity: 1;
             }
+
+@media (min-width: 760px) {
+
+.rights__small-section__overlay__description {
+                    bottom: 0;
+                    -webkit-transform: translateY(500%);
+                            transform: translateY(500%);
+                    opacity:
+            }
+    }
 
 .rights__small-section__overlay__description h3 {
                     color: #435774;
@@ -2309,10 +2391,14 @@ body {
                         transform: translateX(0);
             }
 
+@media (min-width: 760px) {
+
 .rights__small-section__overlay:hover .rights__small-section__overlay__description {
-                -webkit-transform: translateY(0);
-                        transform: translateY(0);
+                    -webkit-transform: translateY(0);
+                            transform: translateY(0)
+                
             }
+    }
 
 @media (min-width: 760px) {
 
@@ -2630,7 +2716,15 @@ body {
     top: 4.2rem;
     right: 0.6rem;
     z-index: 700;
+    display: none;
 }
+
+@media (min-width: 1000px) {
+
+.cart {
+        display: block
+}
+    }
 
 .cart:hover .cart__popup {
         -webkit-transform: translateX(0rem);

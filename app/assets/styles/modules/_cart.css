@@ -3,6 +3,11 @@
     top: 4.2rem;
     right: 0.6rem;
     z-index: 700;
+    display: none;
+
+    @mixin atMedium {
+        display: block;
+    }
 
     &:hover .cart__popup {
         transform: translateX(0rem);

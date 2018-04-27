@@ -3,6 +3,10 @@ import waypoints from "../../../node_modules/waypoints/lib/noframework.waypoints
 import Chart from "chart.js";
 import $ from "jquery";
 
+window.onload = function() {
+    switchTab("tab1-btn", "tab1");
+};
+
 window.onscroll = function() {
     stickyHeader();
     checkBtn();
@@ -110,6 +114,37 @@ jarallax(document.querySelectorAll('.jarallax'), {
         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
     }
 });
+
+//Donation Tabs
+
+var tab1Btn = document.getElementById("tab1-btn");
+var tab2Btn = document.getElementById("tab2-btn");
+var tab3Btn = document.getElementById("tab3-btn");
+
+tab1Btn.addEventListener("click", function(){
+    switchTab("tab1-btn", "tab1");
+});
+tab2Btn.addEventListener("click", function(){
+    switchTab("tab2-btn", "tab2");
+});
+tab3Btn.addEventListener("click", function(){
+    switchTab("tab3-btn", "tab3");
+});
+
+function switchTab(btnName, tabName) {
+    var tabcontent = document.getElementsByClassName("donate__description");
+    var tablinks = document.getElementsByClassName("donate__options__option");
+
+    for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("donate__description--active");
+    }
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("donate__options__option--active");
+    }
+
+    document.getElementById(tabName).classList.add("donate__description--active");
+    document.getElementById(btnName).classList.add("donate__options__option--active");
+}
 
 //CountUp
 

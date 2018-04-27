@@ -72,6 +72,11 @@
             &:last-of-type {
                 border-top: none;
             }
+
+            &--active {
+                color: $mainPurple;
+                background-color: #fff;
+            }
         }
     }
 
@@ -86,6 +91,15 @@
         @mixin atXSmall {
             width: 61%;
             margin-top: 0;
+        }
+
+    }
+    
+    &__description {
+        display: none;
+
+        &--active {
+            display: block;
         }
     }
 
