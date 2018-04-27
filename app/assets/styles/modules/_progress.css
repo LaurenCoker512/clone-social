@@ -4,7 +4,7 @@
     margin-bottom: 3.5rem;
     color: #fff;
 
-    @mixin atSmall {
+    @mixin atXSmall {
         height: 31.75rem;
     }
 
@@ -46,7 +46,7 @@
         width: 100%;
         display: flex;
 
-        @mixin atSmall {
+        @mixin atXSmall {
             width: 50%;
         }
 

@@ -1,16 +1,56 @@
 .funds {
     margin-bottom: 25rem;
-    height: 25.25rem;
+    height: 62rem;
     color: $darkBlue;
+
+    @mixin atSmall {
+        height: 36rem; 
+    }
+
+    @mixin atMedium {
+        height: 22rem;
+    }
 
     &__content {
         display: flex;
         margin-top: 3.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+
+        @mixin atSmall {
+            margin: 3rem;
+            justify-content: space-between;
+        }
+
+        @mixin atMedium {
+            flex-wrap: nowrap;
+            margin: 3rem 0 3rem -0.75rem;
+        }
+
+        @mixin atLarge {
+            margin: 3.5rem 2.5rem 3rem 2.5rem; 
+        }
     }
 
     &__section {
-        width: 25%;
+        width: 15rem;
+        margin: 0.5rem 0;
         position: relative;
+
+        @mixin atSmall {
+            margin: 0.5rem 2rem;
+        }
+
+        @mixin atMedium {
+            width: 15rem;
+            margin: 0;
+        }
+
+        &__canvas {
+            width: 100%;
+            position: relative;
+        }
 
         &__text {
             position: absolute;

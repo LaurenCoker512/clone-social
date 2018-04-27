@@ -1145,19 +1145,80 @@ body {
 
 .funds {
     margin-bottom: 25rem;
-    height: 25.25rem;
+    height: 62rem;
     color: #3c576e;
 }
+
+@media (min-width: 760px) {
+
+.funds {
+        height: 36rem
+}
+    }
+
+@media (min-width: 1000px) {
+
+.funds {
+        height: 22rem
+}
+    }
 
 .funds__content {
         display: flex;
         margin-top: 3.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+@media (min-width: 760px) {
+
+.funds__content {
+            margin: 3rem;
+            justify-content: space-between
+    }
+    }
+
+@media (min-width: 1000px) {
+
+.funds__content {
+            flex-wrap: nowrap;
+            margin: 3rem 0 3rem -0.75rem
+    }
+    }
+
+@media (min-width: 1424px) {
+
+.funds__content {
+            margin: 3.5rem 2.5rem 3rem 2.5rem
+    }
     }
 
 .funds__section {
-        width: 25%;
+        width: 15rem;
+        margin: 0.5rem 0;
         position: relative;
     }
+
+@media (min-width: 760px) {
+
+.funds__section {
+            margin: 0.5rem 2rem
+    }
+    }
+
+@media (min-width: 1000px) {
+
+.funds__section {
+            width: 15rem;
+            margin: 0
+    }
+    }
+
+.funds__section__canvas {
+            width: 100%;
+            position: relative;
+        }
 
 .funds__section__text {
             position: absolute;
@@ -1995,7 +2056,7 @@ body {
     color: #fff;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 524px) {
 
 .progress {
         height: 31.75rem
@@ -2053,7 +2114,7 @@ body {
         display: flex;
     }
 
-@media (min-width: 760px) {
+@media (min-width: 524px) {
 
 .progress__section {
             width: 50%
@@ -2090,9 +2151,16 @@ body {
 
 .rights {
     background-color: #435774;
-    height: 79.1875rem;
+    height: 140rem;
     padding-top: 2rem;
 }
+
+@media (min-width: 524px) {
+
+.rights {
+        height: 79.1875rem
+}
+    }
 
 @media (min-width: 760px) {
 
@@ -2127,7 +2195,7 @@ body {
     }
 
 .rights__center {
-        width: 50%;
+        width: 100%;
         height: 100%;
         overflow: hidden;
         position: relative;
@@ -2139,13 +2207,13 @@ body {
                     transform: scale(1.3);
         }
 
-@media (min-width: 760px) {
+@media (min-width: 524px) {
 
 .rights__center {
             width: 50%;
             height: 100%;
-            top: 0;
-            left: 25%
+            top: 0
+            /* left: 25%; */
     }
     }
 
@@ -2242,16 +2310,17 @@ body {
 
 .rights__small-section {
         overflow: hidden;
-        width: 50%;
+        width: 100%;
         position: relative;
         margin-bottom: 4.5rem;
     }
 
-@media (min-width: 760px) {
+@media (min-width: 524px) {
 
 .rights__small-section {
             margin-bottom: 0;
-            overflow: hidden
+            overflow: hidden;
+            width: 50%
     }
     }
 
@@ -2458,12 +2527,19 @@ body {
     }
 
 .tweets {
-    height: 21.375rem;
+    height: 24.625rem;
     color: #fff;
     font-family: "Roboto Slab", sans-serif;
     margin-bottom: 3.5rem;
     position: relative;
 }
+
+@media (min-width: 524px) {
+
+.tweets {
+        height: 21.375rem
+}
+    }
 
 .tweets__overlay {
         width: 100%;
@@ -2488,15 +2564,54 @@ body {
             }
 
 .tweets__slide__tweet {
-            margin-top: 2.5rem;
+            margin: 2.5rem auto 0 auto;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            max-width: 21.75rem;
         }
+
+@media (min-width: 524px) {
+
+.tweets__slide__tweet {
+                max-width: 31.25rem
+        }
+    }
+
+@media (min-width: 760px) {
+
+.tweets__slide__tweet {
+                max-width: 36.25rem
+        }
+    }
 
 .tweets__nav {
         position: absolute;
         top: 75%;
-        left: 46%;
-        right: 46%;
+        left: 41%;
+        right: 41%;
+    }
+
+@media (min-width: 524px) {
+
+.tweets__nav {
+            left: 43%;
+            right: 43%
+    }
+    }
+
+@media (min-width: 760px) {
+
+.tweets__nav {
+            left: 45%;
+            right: 45%
+    }
+    }
+
+@media (min-width: 1000px) {
+
+.tweets__nav {
+            left: 46%;
+            right: 46%
+    }
     }
 
 .tweets__nav__btn {

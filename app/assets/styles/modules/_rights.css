@@ -1,7 +1,11 @@
 .rights {
     background-color: $darkGrayBlue;
-    height: 79.1875rem;
+    height: 140rem;
     padding-top: 2rem;
+
+    @mixin atXSmall {
+        height: 79.1875rem;
+    }
 
     @mixin atSmall {
         height: 35.5rem;
@@ -27,7 +31,7 @@
     }
 
     &__center {
-        width: 50%;
+        width: 100%;
         height: 100%;
         overflow: hidden;
         position: relative;
@@ -37,11 +41,11 @@
             transform: scale(1.3);
         }
 
-        @mixin atSmall {
+        @mixin atXSmall {
             width: 50%;
             height: 100%;
             top: 0;
-            left: 25%;
+            /* left: 25%; */
         }
 
         @mixin atMedium {
@@ -125,13 +129,14 @@
 
     &__small-section {
         overflow: hidden;
-        width: 50%;
+        width: 100%;
         position: relative;
         margin-bottom: 4.5rem;
 
-        @mixin atSmall {
+        @mixin atXSmall {
             margin-bottom: 0;
             overflow: hidden;
+            width: 50%;
         }
 
         &:hover img {

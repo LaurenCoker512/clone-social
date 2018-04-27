@@ -1,9 +1,13 @@
 .tweets {
-    height: 21.375rem;
+    height: 24.625rem;
     color: #fff;
     font-family: "Roboto Slab", sans-serif;
     margin-bottom: 3.5rem;
     position: relative;
+
+    @mixin atXSmall {
+        height: 21.375rem;
+    }
 
     &__overlay {
         width: 100%;
@@ -27,16 +31,40 @@
         }
 
         &__tweet {
-            margin-top: 2.5rem;
+            margin: 2.5rem auto 0 auto;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            max-width: 21.75rem;
+
+            @mixin atXSmall {
+                max-width: 31.25rem;
+            }
+
+            @mixin atSmall {
+                max-width: 36.25rem;
+            }
         }
     }
 
     &__nav {
         position: absolute;
         top: 75%;
-        left: 46%;
-        right: 46%;
+        left: 41%;
+        right: 41%;
+
+        @mixin atXSmall {
+            left: 43%;
+            right: 43%; 
+        }
+
+        @mixin atSmall {
+            left: 45%;
+            right: 45%; 
+        }
+
+        @mixin atMedium {
+            left: 46%;
+            right: 46%; 
+        }
 
         &__btn {
             display: inline-block;
